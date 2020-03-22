@@ -10,6 +10,7 @@ public class GreetingController {
 
     private HelloWorldService helloWorldService;
 
+    //setter based dependency injection
     @Autowired
     public void setHelloWorldService (HelloWorldService helloWorldService){
         this.helloWorldService = helloWorldService;

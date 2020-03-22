@@ -25,7 +25,7 @@ public class HelloConfig {
 
     // Without factory pattern
 //        @Bean
-//        //this tells spring that this is a bean configuration
+//        //this tells spring  that this is a bean configuration
 //        @Profile({"default", "english"})
 //        public HelloWorldService helloWorldServiceEnglish (){
 //            return new HelloWorldServiceEnglishImpl();
