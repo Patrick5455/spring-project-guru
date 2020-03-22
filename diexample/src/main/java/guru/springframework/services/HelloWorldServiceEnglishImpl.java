@@ -1,10 +1,12 @@
 package guru.springframework.services;
 
-import org.springframework.context.annotation.Profile;
-import org.springframework.stereotype.Component;
+//import org.springframework.context.annotation.Profile;
+//import org.springframework.stereotype.Component;
+//
+//@Component
+//@Profile("default")
 
-@Component
-@Profile("default") //this is used when there is multiple beans
+//this is used when there is multiple beans
 // and the bean profile to be used will be indicated in the application properties
 // we can also set one of the bean profiles to default by using keyword "default"...
 // in this case, this component is our default profile...
