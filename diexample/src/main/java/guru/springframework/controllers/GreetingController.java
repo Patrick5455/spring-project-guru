@@ -16,8 +16,12 @@ public class GreetingController {
 
     private HelloWorldService helloWorldServiceGerman;
 
+    private HelloWorldService HelloWorldServiceFrench;
+
+
     //setter based dependency injection
     @Autowired
+    //DEPENDECY INJECTION BY TYPE
     public void setHelloWorldService (HelloWorldService helloWorldService){
         this.helloWorldService = helloWorldService;
     }
@@ -26,9 +30,21 @@ public class GreetingController {
     @Qualifier("helloWorldServiceGerman")
     // the default behaviour of spring in the JAVA config is to name the beans the name of the method
     // that declares it
+
+    //DEPENDECY INJECTION BY (bean method) NAME
     public void setHelloWorldServiceGerman (HelloWorldService helloWorldServiceGerman){
         // we are doing this to autowire multiple beans so the controller class can run methods of two different two beans
         this.helloWorldServiceGerman = helloWorldServiceGerman;
+    }
+
+    @Autowired
+    @Qualifier("french")
+    // here instead of using the name of the method that declares the bean,
+    // we are using the name of the bean which we have specified with the (name = "french") in our config class
+
+    //DEPENDECY INJECTION BY (bean) NAME
+    public void setHelloWorldServiceFrench (HelloWorldService HelloWorldServiceFrench){
+        this.HelloWorldServiceFrench = HelloWorldServiceFrench;
     }
 
 
@@ -38,6 +54,7 @@ public class GreetingController {
 
         System.out.println(greeting);
         System.out.println(helloWorldServiceGerman.getGreeting());
+        System.out.println(HelloWorldServiceFrench.getGreeting());
 
         return greeting;
     }

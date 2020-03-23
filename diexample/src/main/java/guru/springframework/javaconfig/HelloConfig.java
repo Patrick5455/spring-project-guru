@@ -65,7 +65,9 @@ public class HelloConfig {
         return factory.createHelloWorldService("es");
     }
 
-    @Bean
+    @Bean (name = "french")
+    //we can also wire up beans by name too to JAVA configuration by giving the bean a name.
+    // This can be a better way than using the method name with @Qualifier annotation.
     public HelloWorldService helloWorldServiceFrench(HelloWorldFactory factory){
         return factory.createHelloWorldService("fr");
     }
