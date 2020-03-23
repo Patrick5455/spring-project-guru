@@ -13,13 +13,14 @@ import org.springframework.context.annotation.ComponentScan;
 // the @ComponentScan becomes important to annotate because the springboot appication
 // is in another package outside of the guru.springframework package
 public class DiApplication {
+
     public static void main(String[]  args) {
+
        ApplicationContext ctx = SpringApplication.run(DiApplication.class, args);
 
-        GreetingController controller = (GreetingController) ctx.getBean("greetingController");
+        GreetingController controller =  (GreetingController) ctx.getBean("greetingController");
 
         controller.sayHello();
-
     }
 
 }
