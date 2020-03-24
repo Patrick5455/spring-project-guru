@@ -9,7 +9,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Controller;
 
-@Controller
+//@Controller
+// we comment out @Controller when we switch to xml-based bean config from java-based bean config
 public class GreetingController {
 
     private HelloWorldService helloWorldService;
