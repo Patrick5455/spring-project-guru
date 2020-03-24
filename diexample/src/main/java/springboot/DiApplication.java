@@ -9,8 +9,8 @@ import org.springframework.context.annotation.ComponentScan;
 
 @SpringBootApplication
 @ComponentScan("guru.springframework")
-// @ComponentScan scans through the guru.springframework package to manage our beans
-// the @ComponentScan becomes important to annotate because the springboot appication
+// annotating with @ComponentScan, Springboot scans through the guru.springframework package to manage our beans
+// the @ComponentScan becomes important to annotate because the springboot application
 // is in another package outside of the guru.springframework package
 public class DiApplication {
 

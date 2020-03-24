@@ -21,7 +21,7 @@ public class GreetingController {
 
     //setter based dependency injection
     @Autowired
-    //DEPENDECY INJECTION BY TYPE
+    //DEPENDECY INJECTION BY (INTERFACE) TYPE
     public void setHelloWorldService (HelloWorldService helloWorldService){
         this.helloWorldService = helloWorldService;
     }
