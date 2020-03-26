@@ -8,6 +8,12 @@
 and intellij will autocomplete the component scanning -->
     <context:component-scan base-package="guru.springframework"/>
 
+    <import resource="classpath:/spring/beans.xml"/>
 <!--    converting our controller class from java-based bean configuration to xml-based bean configuration -->
-    <bean id="greetingController" class="guru.springframework.controllers.GreetingController"/>
+    <bean id="greetingController" class="guru.springframework.controllers.GreetingController">
+        <property name="helloWorldService" ref="default"/>
+        <property name="helloWorldServiceGerman" ref="german"/>
+        <property name="helloWorldServiceFrench" ref="french"/>
+    </bean>
+
 </beans>

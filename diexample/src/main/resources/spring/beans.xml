@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+
+<!--    bean configuration-->
+    <bean id="factory" class="guru.springframework.services.HelloWorldFactory"/>
+
+    <bean id="french" factory-bean="factory" factory-method="createHelloWorldService">
+        <constructor-arg value="fr"/>
+    </bean>
+
+    <bean id="german" factory-bean="factory" factory-method="createHelloWorldService">
+        <constructor-arg value="de"/>
+    </bean>
+
+    <bean id="polish" factory-bean="factory" factory-method="createHelloWorldService">
+        <constructor-arg value="pl"/>
+    </bean>
+
+    <bean id="russia" factory-bean="factory" factory-method="createHelloWorldService">
+        <constructor-arg value="ru"/>
+    </bean>
+
+
+<!--    spring profiles-->
+    <beans profile="english">
+        <import resource="classpath:/spring/english-profile.xml"/>
+    </beans>
+
+    <beans profile="spanish">
+        <import resource="classpath:/spring/spanish-profile.xml"/>
+    </beans>
+
+</beans>

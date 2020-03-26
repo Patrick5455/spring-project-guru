@@ -40,50 +40,50 @@ public class HelloConfig {
 //        }
 
     //With Factory Pattern
-    @Bean
-    // a method with HelloWorldFactory class as  Return Type
-    public HelloWorldFactory helloWorldFactory(){
-        return new HelloWorldFactory();
-    }
-
-    @Bean
-    // a method with HelloWorldServiceEnglish class as  Return Type -- using polymorphism
-    // it collects an HelloWorldFactory class's reference as parameter
-    // to call an HelloWorldFactory method - createHelloWorldService
-    @Profile("english")
-    @Primary
-    public HelloWorldService helloWorldServiceEnglish (HelloWorldFactory factory){
-        return factory.createHelloWorldService("en");
-    }
-
-    @Bean
-    @Profile("spanish")
-    @Primary
-    // the @Primary annotation is used to tell spring to run prioritise a particular bean
-    // however, the bean profile must also be indicated in the application properties
-    public  HelloWorldService helloWorldServiceSpanish (HelloWorldFactory factory){
-        return factory.createHelloWorldService("es");
-    }
-
-    @Bean (name = "french")
-    //we can also wire up beans by name too to JAVA configuration by giving the bean a name.
-    // This can be a better way than using the method name with @Qualifier annotation.
-    public HelloWorldService helloWorldServiceFrench(HelloWorldFactory factory){
-        return factory.createHelloWorldService("fr");
-    }
-
-    @Bean
-    public HelloWorldService helloWorldServiceGerman(HelloWorldFactory factory){
-        return factory.createHelloWorldService("de");
-    }
-
-    @Bean
-    public HelloWorldService helloWorldServicePolish (HelloWorldFactory factory){
-        return factory.createHelloWorldService("pl");
-    }
-
-    @Bean
-    public HelloWorldService helloWorldServiceRussian (HelloWorldFactory factory){
-         return factory.createHelloWorldService("ru");
-    }
+//    @Bean
+//    // a method with HelloWorldFactory class as  Return Type
+//    public HelloWorldFactory helloWorldFactory(){
+//        return new HelloWorldFactory();
+//    }
+//
+//    @Bean
+//    // a method with HelloWorldServiceEnglish class as  Return Type -- using polymorphism
+//    // it collects an HelloWorldFactory class's reference as parameter
+//    // to call an HelloWorldFactory method - createHelloWorldService
+//    @Profile("english")
+//    @Primary
+//    public HelloWorldService helloWorldServiceEnglish (HelloWorldFactory factory){
+//        return factory.createHelloWorldService("en");
+//    }
+//
+//    @Bean
+//    @Profile("spanish")
+//    @Primary
+//    // the @Primary annotation is used to tell spring to run prioritise a particular bean
+//    // however, the bean profile must also be indicated in the application properties
+//    public  HelloWorldService helloWorldServiceSpanish (HelloWorldFactory factory){
+//        return factory.createHelloWorldService("es");
+//    }
+//
+//    @Bean (name = "french")
+//    //we can also wire up beans by name too to JAVA configuration by giving the bean a name.
+//    // This can be a better way than using the method name with @Qualifier annotation.
+//    public HelloWorldService helloWorldServiceFrench(HelloWorldFactory factory){
+//        return factory.createHelloWorldService("fr");
+//    }
+//
+//    @Bean
+//    public HelloWorldService helloWorldServiceGerman(HelloWorldFactory factory){
+//        return factory.createHelloWorldService("de");
+//    }
+//
+//    @Bean
+//    public HelloWorldService helloWorldServicePolish (HelloWorldFactory factory){
+//        return factory.createHelloWorldService("pl");
+//    }
+//
+//    @Bean
+//    public HelloWorldService helloWorldServiceRussian (HelloWorldFactory factory){
+//         return factory.createHelloWorldService("ru");
+//    }
 }
