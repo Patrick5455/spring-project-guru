@@ -32,7 +32,7 @@ public class ProductServiceImpl implements  ProductService{
         product1.setId(1);
         product1.setName("Product Name");
         product1.setPrice(new BigDecimal("10.10"));
-        product1.setImageUrl("https://www,example.com/product1");
+        product1.setImageUrl("https://www.example.com/product1");
 
         productMap.put(1, product1);
 
@@ -40,7 +40,7 @@ public class ProductServiceImpl implements  ProductService{
         product2.setId(2);
         product2.setName("Product 2");
         product2.setPrice(new BigDecimal("20.20"));
-        product2.setImageUrl("https://www,example.com/product2");
+        product2.setImageUrl("https://www.example.com/product2");
 
         productMap.put(2, product2);
 
@@ -48,7 +48,7 @@ public class ProductServiceImpl implements  ProductService{
         product3.setId(3);
         product3.setName("Product 3");
         product3.setPrice(new BigDecimal("30.30"));
-        product3.setImageUrl("https://www,example.com/product3");
+        product3.setImageUrl("https://www.example.com/product3");
 
         productMap.put(3, product3);
 
@@ -56,7 +56,7 @@ public class ProductServiceImpl implements  ProductService{
         product4.setId(4);
         product4.setName("Product 4");
         product4.setPrice(new BigDecimal("40.40"));
-        product4.setImageUrl("https://www,example.com/product4");
+        product4.setImageUrl("https://www.example.com/product4");
 
         productMap.put(4, product4);
 
@@ -64,7 +64,7 @@ public class ProductServiceImpl implements  ProductService{
         product5.setId(5);
         product5.setName("Product 5");
         product5.setPrice(new BigDecimal("50.50"));
-        product5.setImageUrl("https://www,example.com/product5");
+        product5.setImageUrl("https://www.example.com/product5");
 
         productMap.put(5, product5);
 
