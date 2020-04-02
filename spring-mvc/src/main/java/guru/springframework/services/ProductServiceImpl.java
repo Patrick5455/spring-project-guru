@@ -20,6 +20,12 @@ public class ProductServiceImpl implements  ProductService{
         return new ArrayList<>(productMap.values());
     }
 
+    @Override
+    public  Product getProductId(Integer id){
+
+        return productMap.get(id);
+    }
+
     public ProductServiceImpl (){
         listAllProducts();
     }
